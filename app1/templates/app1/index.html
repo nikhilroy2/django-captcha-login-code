@@ -1,0 +1,32 @@
+{% load widget_tweaks %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, enim
+      natus? Itaque, sit ratione laboriosam nihil soluta quam. Debitis iure
+      blanditiis unde consequatur nihil magni possimus tempore inventore sed
+      magnam esse quasi eveniet quod odio, voluptatibus dolorem in perferendis
+      incidunt minus voluptatem veritatis! Veritatis sequi officiis veniam ex
+      explicabo tenetur?
+    </h1>
+
+    <form action="" method="post">
+      {% csrf_token %}
+
+      {{form.captcha}}
+
+      <div class="g-recaptcha" data-sitekey="{{ site_key }}"></div>
+    </form>
+
+
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+  </body>
+</html>
